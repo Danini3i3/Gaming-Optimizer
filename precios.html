@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planes y Precios — Gaming Optimizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="logo.png" alt="GO"></div>
+        <div>
+          <h1 style="font-size:14px;margin:0">Gaming Optimizer</h1>
+          <div style="font-size:12px;color:var(--muted)">Optimiza tu PC para jugar</div>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="index.html#beneficios">Beneficios</a>
+        <button class="btn btn-ghost" onclick="window.location.href='index.html#how'">Ver cómo funciona</button>
+        <button class="btn btn-primary" onclick="download()">Descargar Gratis</button>
+      </nav>
+    </header>
+
+    <!-- Sección de precios -->
+    <section style="margin-top:40px;padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)">
+      <h1 style="font-size:40px;text-align:center;margin:0 0 12px 0">Planes y Precios</h1>
+      <p style="color:var(--muted);text-align:center;max-width:680px;margin:0 auto 32px auto">Elige el plan que mejor se adapta a tus necesidades. Ambos incluyen acceso a nuestras características principales con opciones de escalado.</p>
+      
+      <div class="plans" style="display:grid;grid-template-columns:1fr;gap:20px;max-width:900px;margin:0 auto">
+        <!-- Plan Free -->
+        <div class="plan card" style="padding:24px">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <h2 style="margin:0 0 6px 0">Free</h2>
+              <p style="color:var(--muted);margin:0;font-size:13px">Perfecto para empezar</p>
+            </div>
+          </div>
+          <div class="price" style="margin:16px 0">0€ / mes</div>
+          <p style="color:var(--muted);font-size:13px;margin:0 0 16px 0">Acceso siempre gratuito. Sin tarjeta requerida.</p>
+          
+          <ul style="color:var(--muted);list-style:none;padding:0;margin:0 0 16px 0">
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ Optimización básica</li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ Historial de optimización limitado</li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ Soporte por email (48h respuesta)</li>
+            <li style="padding:8px 0">✓ Actualizaciones automáticas</li>
+          </ul>
+          
+          <button class="btn btn-ghost" onclick="download('free')" style="width:100%;padding:12px;justify-content:center">Descargar Gratis</button>
+        </div>
+
+        <!-- Plan Pro -->
+        <div class="plan plan-pro card" style="padding:24px;border:2px solid rgba(54,198,255,0.12)">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <h2 style="margin:0 0 6px 0">Pro</h2>
+              <p style="color:var(--muted);margin:0;font-size:13px">Mejor opción para gamers serios</p>
+            </div>
+            <span style="background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021012;padding:4px 12px;border-radius:8px;font-size:11px;font-weight:700">RECOMENDADO</span>
+          </div>
+          <div class="price" style="margin:16px 0">4,99€ <span style="color:var(--muted);font-size:14px">/ mes</span></div>
+          <p style="color:var(--muted);font-size:13px;margin:0 0 16px 0">7 días de prueba gratis. Cancelación en cualquier momento.</p>
+          
+          <ul style="color:var(--muted);list-style:none;padding:0;margin:0 0 16px 0">
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ <strong>Optimización avanzada</strong></li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ <strong>Prioridad CPU/GPU</strong> inteligente</li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ <strong>Análisis detallado</strong> en tiempo real</li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ <strong>Historial ilimitado</strong> de optimizaciones</li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ <strong>Soporte prioritario</strong> 24/7 por chat</li>
+            <li style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)">✓ <strong>Perfiles personalizados</strong> por juego</li>
+            <li style="padding:8px 0">✓ <strong>Beta features</strong> exclusivas</li>
+          </ul>
+          
+          <button class="btn btn-primary" onclick="download('pro')" style="width:100%;padding:12px;justify-content:center">Probar Pro (7 días gratis)</button>
+        </div>
+      </div>
+
+      <!-- Comparativa detallada -->
+      <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.06)">
+        <h2 style="margin:0 0 24px 0;text-align:center">Comparativa de características</h2>
+        <div style="overflow-x:auto">
+          <table style="width:100%;color:var(--muted);border-collapse:collapse">
+            <thead>
+              <tr style="border-bottom:2px solid rgba(255,255,255,0.06)">
+                <th style="text-align:left;padding:12px;color:#e6eef6">Característica</th>
+                <th style="text-align:center;padding:12px;color:#e6eef6">Free</th>
+                <th style="text-align:center;padding:12px;color:#e6eef6">Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Optimización automática</td>
+                <td style="text-align:center;padding:12px">✓</td>
+                <td style="text-align:center;padding:12px">✓</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Detección de juegos</td>
+                <td style="text-align:center;padding:12px">✓</td>
+                <td style="text-align:center;padding:12px">✓</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Análisis detallado CPU/GPU</td>
+                <td style="text-align:center;padding:12px">Básico</td>
+                <td style="text-align:center;padding:12px">Avanzado</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Historial de sesiones</td>
+                <td style="text-align:center;padding:12px">7 días</td>
+                <td style="text-align:center;padding:12px">Ilimitado</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Perfiles por juego</td>
+                <td style="text-align:center;padding:12px">—</td>
+                <td style="text-align:center;padding:12px">✓ Ilimitados</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Modo Gaming Inteligente</td>
+                <td style="text-align:center;padding:12px">Estándar</td>
+                <td style="text-align:center;padding:12px">Elitista</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Las prioridades CPU/GPU</td>
+                <td style="text-align:center;padding:12px">Automática</td>
+                <td style="text-align:center;padding:12px">Manual + IA</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
+                <td style="padding:12px">Soporte técnico</td>
+                <td style="text-align:center;padding:12px">Email (48h)</td>
+                <td style="text-align:center;padding:12px">Chat 24/7</td>
+              </tr>
+              <tr>
+                <td style="padding:12px">Beta features</td>
+                <td style="text-align:center;padding:12px">—</td>
+                <td style="text-align:center;padding:12px">✓ Acceso</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.06)">
+        <h2 style="margin:0 0 24px 0;text-align:center">Preguntas frecuentes</h2>
+        <div style="max-width:680px;margin:0 auto">
+          <div style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+            <h3 style="margin:0 0 8px 0;color:#e6eef6">¿Puedo cambiar de plan en cualquier momento?</h3>
+            <p style="margin:0;color:var(--muted)">Sí, puedes actualizar a Pro en cualquier momento. Si cancelas Pro, vuelves a Free sin perder tu historial.</p>
+          </div>
+          <div style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+            <h3 style="margin:0 0 8px 0;color:#e6eef6">¿Necesito tarjeta de crédito para la prueba gratuita?</h3>
+            <p style="margin:0;color:var(--muted)">Sí, necesitamos una tarjeta para verificar, pero no se cobrará nada en los 7 días de prueba.</p>
+          </div>
+          <div style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
+            <h3 style="margin:0 0 8px 0;color:#e6eef6">¿Qué juegos son compatibles?</h3>
+            <p style="margin:0;color:var(--muted)">Gaming Optimizer funciona con cualquier juego que se ejecute en Windows 10/11. Detecta automáticamente más de 5000 títulos populares.</p>
+          </div>
+          <div style="padding:16px 0">
+            <h3 style="margin:0 0 8px 0;color:#e6eef6">¿Puedo reembolso si no estoy satisfecho?</h3>
+            <p style="margin:0;color:var(--muted)">Ofrecemos garantía de reembolso en 30 días. Si no ves mejora en FPS, devolvemos tu dinero sin preguntas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <section class="final-cta" style="margin-top:48px">
+        <h2 style="margin:6px 0">¿Listo para optimizar tu PC?</h2>
+        <p style="color:var(--muted)">Elige el plan que mejor se adapta a ti y empieza a jugar con máximo rendimiento.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+          <button class="btn btn-ghost" onclick="download('free')">Descargar Free</button>
+          <button class="btn btn-primary" onclick="download('pro')">Probar Pro (7 días gratis)</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="logo" style="width:36px;height:36px;font-size:12px">GO</div>
+          <div>
+            <strong>Gaming Optimizer</strong>
+            <div style="font-size:12px;color:var(--muted)">Optimización automática para gamers</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a href="politica-privacidad.html">Política de privacidad</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+      <div style="font-size:13px;color:var(--muted);margin-top:8px">© <span id="year"></span> Gaming Optimizer. Todos los derechos reservados.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function download(plan){
+      plan = plan || 'free';
+      const name = plan === 'pro' ? 'Pro (prueba)' : 'Free';
+      alert('Iniciando descarga de ' + name + '. Archivo de instalación simulado.');
+    }
+
+    window.addEventListener('keydown', (e)=>{
+      if(e.key.toLowerCase() === 'd'){
+        download();
+      }
+    })
+  </script>
+</body>
+</html>
