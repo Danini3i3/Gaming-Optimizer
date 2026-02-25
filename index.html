@@ -13,93 +13,71 @@
     <!-- Header -->
     <header>
       <div class="brand">
-        <div class="logo"><img src="logo.png" alt="GO"></div>
+        <div class="logo"><img src="m/logo.png" alt="GO"></div>
         <div>
           <h1 style="font-size:14px;margin:0">Gaming Optimizer</h1>
           <div style="font-size:12px;color:var(--muted)">Optimiza tu PC para jugar</div>
         </div>
       </div>
       <nav>
-        <a class="nav-link" href="#beneficios">Beneficios</a>
+        <a class="nav-link" href="beneficios.html">Beneficios</a>
         <a class="nav-link" href="precios.html">Precios</a>
-        <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">Ver cómo funciona</button>
+        <button class="btn btn-ghost" onclick="location.href='como-funciona.html'">Ver cómo funciona</button>
         <button class="btn btn-primary" onclick="download()">Descargar Gratis</button>
       </nav>
     </header>
 
     <!-- Hero -->
-    <section class="hero" style="background-image:url('gif1a.webp');background-size:cover;background-position:center;background-attachment:fixed;">
+    <section class="hero" style="background-image:url('m/gif1a.webp');background-size:cover;background-position:center;background-attachment:fixed;">
       <div class="hero-overlay"></div>
       <div class="hero-inner">
-        <div>
-          <h2 class="hero-title">Más FPS. Menos Lag.</h2>
-          <p class="hero-sub">Gaming Optimizer ajusta automáticamente los recursos del sistema para maximizar rendimiento en juegos: prioriza GPU/CPU, cierra procesos innecesarios y reduce latencia.</p>
+        <div class="hero-top">
+          <img class="hero-logo2" src="m/logo2.png" alt="Logo 2">
+          <div>
+            <h2 class="hero-title">Más FPS. Menos Lag.</h2>
+            <p class="hero-sub">Gaming Optimizer ajusta automáticamente los recursos del sistema para maximizar rendimiento en juegos: prioriza GPU/CPU, cierra procesos innecesarios y reduce latencia.</p>
+          </div>
         </div>
         <div class="hero-ctas">
           <button class="btn btn-primary" onclick="download()">Descargar Gratis</button>
-          <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">Ver cómo funciona</button>
+          <button class="btn btn-ghost" onclick="location.href='como-funciona.html'">Ver cómo funciona</button>
         </div>
       </div>
     </section>
 
-    <!-- Beneficios -->
-    <section id="beneficios">
-      <h2 style="margin:8px 0 12px 0">Beneficios</h2>
-      <div class="benefits">
-        <div class="benefit card">
-          <div class="icon">⚡</div>
-          <div>
-            <h3>Mejora automática del rendimiento</h3>
-            <p>Detecta el juego en ejecución y aplica perfiles óptimos sin intervención.</p>
-          </div>
-        </div>
-
-        <div class="benefit card">
-          <div class="icon">🧠</div>
-          <div>
-            <h3>Optimización de CPU y GPU</h3>
-            <p>Balance inteligente entre CPU y GPU para reducir cuellos de botella.</p>
-          </div>
-        </div>
-
-        <div class="benefit card">
-          <div class="icon">🎯</div>
-          <div>
-            <h3>Modo Gaming Inteligente</h3>
-            <p>Activa ajustes en tiempo real priorizando estabilidad y FPS.</p>
-          </div>
-        </div>
-
-        <div class="benefit card">
-          <div class="icon">🧹</div>
-          <div>
-            <h3>Limpieza de procesos innecesarios</h3>
-            <p>Libera RAM y reduce procesos en segundo plano que consumen recursos.</p>
-          </div>
+    <!-- Beneficios (nuevo diseño split imagen->negro) -->
+    <section id="beneficios" class="feature-split full-bleed">
+      <div class="split-image" style="background-image: url('m/beneficios.webp')" aria-hidden="true"></div>
+      <div class="split-content card">
+        <h2>Beneficios</h2>
+        <p class="lead">Mejora rendimiento, reduce latencia y optimiza recursos automáticamente. Aquí un resumen rápido de lo que obtienes:</p>
+        <ul class="brief-list">
+          <li>Incremento de FPS y estabilidad en juegos.</li>
+          <li>Balance inteligente entre CPU y GPU.</li>
+          <li>Modo Gaming que prioriza procesos esenciales.</li>
+          <li>Limpieza automática de procesos en segundo plano.</li>
+        </ul>
+        <div class="split-cta">
+          <button class="btn btn-primary" onclick="location.href='beneficios.html'">Ver todos los beneficios</button>
         </div>
       </div>
     </section>
 
 
 
-    <!-- Cómo funciona -->
-    <section id="how">
-      <h2 style="margin:8px 0 12px 0">Cómo funciona</h2>
-      <div class="steps">
-        <div class="step card">
-          <div class="step-num">1</div>
-          <h3>Instala la aplicación</h3>
-          <p style="color:var(--muted)">Descarga e instala en menos de un minuto.</p>
-        </div>
-        <div class="step card">
-          <div class="step-num">2</div>
-          <h3>Analiza tu sistema</h3>
-          <p style="color:var(--muted)">Un diagnóstico detecta cuellos de botella y procesos pesados.</p>
-        </div>
-        <div class="step card">
-          <div class="step-num">3</div>
-          <h3>Optimiza con un clic</h3>
-          <p style="color:var(--muted)">Aplica el perfil óptimo para tu juego y disfruta rendimiento inmediato.</p>
+    <!-- Cómo funciona (split: resumen + imagen que se hace negra hacia la izquierda) -->
+    <section id="how" class="feature-split reverse full-bleed">
+      <div class="split-image" style="background-image: url('m/cfunciona.jpg')" aria-hidden="true"></div>
+      <div class="split-content card">
+        <h2>Cómo funciona</h2>
+        <p class="lead">Un flujo simple en 3 pasos: instala, analiza y optimiza. A continuación un resumen rápido:</p>
+        <ul class="brief-list">
+          <li>Instalación ligera y automatizada.</li>
+          <li>Diagnóstico en tiempo real de recursos y cuellos de botella.</li>
+          <li>Aplicación de perfiles optimizados con un clic.</li>
+        </ul>
+        <div class="split-cta">
+          <button class="btn btn-primary" onclick="location.href='como-funciona.html'">Ver detalles de funcionamiento</button>
         </div>
       </div>
     </section>
